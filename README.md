@@ -140,6 +140,6 @@ banking-modern-datastack/
 ---
 
 **Author**: *Ismail Jirari*  
-**LinkedIn**: [jayachandrakadiveti](https://www.linkedin.com/in/ismail-jirari-713346335/)  
+**LinkedIn**: [ismail jirari](https://www.linkedin.com/in/ismail-jirari-713346335/)  
 **Contact**: [ismailjirari5@gmail.com](mailto:ismailjirari5@gmail.com)  
 
