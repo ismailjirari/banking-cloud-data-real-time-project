@@ -30,11 +30,11 @@ BankPulse AI demonstrates how **AI can be built on top of a reliable modern data
 
 ---
 
-## Architecture before using AI
+## THE CLOUD DATA PIPELINE ARCHITECTURE
 
 <img width="5647" height="3107" alt="Architecture" src="https://github.com/user-attachments/assets/7521ea8a-451e-46ff-9db0-71dd6ddf8181" />
 
-## Architecture with AI
+## ARCHITECTURE WITH AI
 
 <img src="nouvelle_archi.png" alt="Architecture avec IA" width="900">
 
