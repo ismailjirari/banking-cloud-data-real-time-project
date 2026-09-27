@@ -1,4 +1,4 @@
-# 🏦 Banking Cloud Data real time project 
+# 🏦 BankPulse AI 
 
 ![Snowflake](https://img.shields.io/badge/Snowflake-29B5E8?logo=snowflake&logoColor=white)
 ![DBT](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
@@ -23,6 +23,9 @@ We simulate **customer, account, and transaction data**, stream changes in real 
 ## 🏗️ Architecture  
 
 <img width="5647" height="3107" alt="Architecture" src="https://github.com/user-attachments/assets/7521ea8a-451e-46ff-9db0-71dd6ddf8181" />
+
+
+<img src="nouvelle_archi.png" alt="Architecture avec IA" width="600">
 
 
 **Pipeline Flow:**
@@ -80,6 +83,10 @@ banking-modern-datastack/
 │   └── generate_and_post_connector.py
 ├── postgres/                  # Postgres schema (OLTP DDL & seeds)
 │   └── schema.sql
+├── ai-rag/                    # AI Banking Data Assistant (RAG on Gold layer)
+│   ├── app.py
+│   ├── rag/
+│   └── README.md
 ├── .gitignore
 ├── docker-compose.yml         # Containerized infra
 ├── dockerfile-airflow.dockerfile
@@ -127,6 +134,34 @@ banking-modern-datastack/
 ### **6. CI/CD with GitHub Actions**  
 - **ci.yml** → Lint, dbt compile, run tests.  
 - **cd.yml** → Deploy DAGs & dbt models on merge.  
+
+---
+
+## 🤖 AI Banking Data Assistant (New)
+
+On top of the existing pipeline, a lightweight **RAG / Text-to-SQL chatbot**
+lets users ask natural-language questions about the banking data in the
+**Snowflake Gold layer** — without touching any of the existing
+Postgres/Kafka/Debezium/MinIO/Airflow/dbt/CI-CD components.
+
+```text
+Snowflake Gold (dim_customers, dim_accounts, fact_transactions)
+      ↓
+Text-to-SQL (LLM via OpenRouter)
+      ↓
+Data Retrieval (read-only SQL against Gold)
+      ↓
+Grounded Answer Generation (LLM via OpenRouter)
+      ↓
+AI Banking Assistant (Streamlit chat UI)
+```
+
+The assistant only answers using data actually retrieved from the Gold
+layer — if a question can't be answered from `dim_customers`, `dim_accounts`,
+or `fact_transactions`, it says so instead of guessing. The chat UI shows the
+generated SQL and retrieved rows for full transparency.
+
+See [`ai-rag/README.md`](ai-rag/README.md) for setup and run instructions.
 
 ---
 

@@ -1,0 +1,5 @@
+streamlit>=1.37
+snowflake-connector-python>=3.11
+python-dotenv>=1.0
+requests>=2.32
+pandas>=2.2
