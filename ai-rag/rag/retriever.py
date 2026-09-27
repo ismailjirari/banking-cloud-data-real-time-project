@@ -51,7 +51,7 @@ def run_query(sql: str) -> tuple[list[str], list[tuple]]:
         columns = [desc[0] for desc in cur.description]
         rows = cur.fetchmany(Config.MAX_ROWS_RETURNED)
         return columns, rows
-    except Exception as exc:  # noqa: BLE001 - surface as a clean retrieval error
+    except Exception as exc:
         raise RetrievalError(f"Query execution failed: {exc}") from exc
     finally:
         if conn is not None:

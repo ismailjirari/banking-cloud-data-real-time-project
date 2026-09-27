@@ -10,7 +10,6 @@ Run with:
 
 import pandas as pd
 import streamlit as st
-
 from rag.config import Config
 from rag.pipeline import answer_question
 
