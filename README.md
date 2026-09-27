@@ -13,10 +13,20 @@
 ---
 
 ## 📌 Project Overview
-This project demonstrates an **end-to-end modern cloud data stack pipeline** for a **Banking domain**.  
-We simulate **customer, account, and transaction data**, stream changes in real time, transform them into analytics-ready models, and visualize insights — following **best practices of CI/CD and data warehousing**.
 
-👉 Think of it as a **real-world banking data ecosystem** built on modern data tools.  
+**BankPulse AI** is an **AI-powered banking data intelligence platform** that combines a modern real-time cloud data engineering pipeline with **Generative AI and RAG/Text-to-SQL** to make banking data accessible through natural language.
+
+The platform ingests and processes **customer, account, and transaction data** through a real-time data pipeline using **PostgreSQL, Kafka, Debezium, MinIO, Airflow, Snowflake, and dbt**, transforming raw banking events into trusted **Gold-layer analytical data**.
+
+On top of this data foundation, **BankPulse AI** introduces an intelligent banking assistant that allows users to **ask questions about banking data in natural language**. The AI converts questions into SQL, retrieves the relevant information from Snowflake, and generates **grounded answers based only on the retrieved data**.
+
+👉 **The idea is simple: turn a complex banking data platform into an intelligent conversational interface — connecting real-time data engineering with Generative AI.**
+
+### 🎯 Built for the BUILD WITH AI Hackathon
+
+**GOMYCODE × NVIDIA — 27 September 2026**
+
+BankPulse AI demonstrates how **AI can be built on top of a reliable modern data foundation** to transform raw banking data into actionable and explainable insights. 
 
 ---
 
