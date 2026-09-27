@@ -13,9 +13,9 @@ import streamlit as st
 from rag.config import Config
 from rag.pipeline import answer_question
 
-st.set_page_config(page_title="Banking Gold AI Assistant", page_icon="🏦", layout="centered")
+st.set_page_config(page_title="BankPulse AI", page_icon="🏦", layout="centered")
 
-st.title("🏦 Banking Data Assistant")
+st.title("🏦 BankPulse AI")
 st.caption(
     "Ask questions about customers, accounts, and transactions. "
     "Answers are generated from the Snowflake **Gold layer** — not invented."
