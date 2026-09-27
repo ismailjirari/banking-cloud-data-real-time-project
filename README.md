@@ -24,7 +24,7 @@ We simulate **customer, account, and transaction data**, stream changes in real 
 
 <img width="5647" height="3107" alt="Architecture" src="https://github.com/user-attachments/assets/7521ea8a-451e-46ff-9db0-71dd6ddf8181" />
 
-**Architecture avec IA:**
+**Architecture with IA:**
 <img src="nouvelle_archi.png" alt="Architecture avec IA" width="900">
 
 
